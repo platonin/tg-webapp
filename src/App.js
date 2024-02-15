@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+const tg = window.Telegram.WebApp;
+// function App() {
+//   return (
+//       <div classname = "App">
+//         привет ариветеп
+//       </div>
+//   );
+// }
+//
+// export default App;
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [button1Clicked, setButton1Clicked] = useState(false);
+    const [button2Clicked, setButton2Clicked] = useState(false);
+    const [button3Clicked, setButton3Clicked] = useState(false);
+
+    return (
+        <div>
+            <button onClick={() => setButton1Clicked(true)}>Button 1</button>
+            <button onClick={() => setButton2Clicked(true)}>Button 2</button>
+            <button onClick={() => setButton3Clicked(true)}>Button 3</button>
+
+            {button1Clicked && <p>Button 1 was clicked!</p>}
+            {button2Clicked && <p>Button 2 was clicked!</p>}
+            {button3Clicked && <p>Button 3 was clicked!</p>}
+        </div>
+    );
 }
 
 export default App;
