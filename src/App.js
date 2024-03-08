@@ -35,6 +35,12 @@ function App() {
         alert("Кнопка нажата!");
     };
 
+    const handleSendData = () => {
+        const data = "handleSubmitActive";
+        console.log(data);
+        tg.sendData(data);
+    };
+
     const onSendData = useCallback(() => {
         // Ваше сообщение
         tg.sendData("handleSubmitActive");
