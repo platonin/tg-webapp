@@ -21,12 +21,21 @@ function App() {
         tg.close()
     }
 
+    const onToggleButton = () =>{
+        if (tg.MainButton.isVisible) {
+            tg.MainButton.hide();
+        }
+        else {
+            tg.MainButton.show();
+        }
+    }
+
 
     return (
         <div className="App">
             сайт сайт сайт
             <button onClick={onClose}>Закрыть эту хрень</button>
-            <Button title={'Test'} disable={false} />
+            <Button title={'Test'} disable={false} onClick={onToggleButton()} />
         </div>
     )
 }
