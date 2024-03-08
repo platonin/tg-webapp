@@ -60,7 +60,7 @@ function App() {
             <button onClick={onClose}>Закрыть эту хрень</button>
             <Button title={'кнопка снизу'} disable={false} onClick={onToggleButton} />
             <Button title={'вывод сообщения'} disable={false} onClick={handleClick} />
-            <Button title={'subscribe'} disable={false} onClick={onSendData} />
+            <Button title={'subscribe'} disable={false} onClick={handleSendData} />
         </div>
     )
 }
