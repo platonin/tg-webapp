@@ -35,6 +35,11 @@ function App() {
         alert("Кнопка нажата!");
     };
 
+    const handleSubmit = () => {
+        // Ваше сообщение
+        tg.sendData("handleSubmitActive")
+    };
+
 
     return (
         <div className="App">
@@ -42,6 +47,7 @@ function App() {
             <button onClick={onClose}>Закрыть эту хрень</button>
             <Button title={'кнопка снизу'} disable={false} onClick={onToggleButton} />
             <Button title={'вывод сообщения'} disable={false} onClick={handleClick} />
+            <Button title={'вывод сообщения'} disable={false} onClick={handleSubmit} />
         </div>
     )
 }
