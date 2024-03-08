@@ -30,12 +30,18 @@ function App() {
         }
     }
 
+    const handleClick = () => {
+        // Ваше сообщение
+        alert("Кнопка нажата!");
+    };
+
 
     return (
         <div className="App">
             сайт сайт сайт
             <button onClick={onClose}>Закрыть эту хрень</button>
-            <Button title={'Test'} disable={false} onClick={onToggleButton} />
+            <Button title={'кнопка снизу'} disable={false} onClick={onToggleButton} />
+            <Button title={'вывод сообщения'} disable={false} onClick={handleClick} />
         </div>
     )
 }
