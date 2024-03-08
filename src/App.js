@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import './App.css';
 import Button from "./Components/Button/Button";
 const tg = window.Telegram.WebApp;
@@ -35,10 +35,17 @@ function App() {
         alert("Кнопка нажата!");
     };
 
-    const handleSubmit = () => {
+    const onSendData = useCallback(() => {
         // Ваше сообщение
-        tg.sendData("handleSubmitActive")
-    };
+        tg.sendData("handleSubmitActive");
+    }, [])
+
+    useEffect(() => {
+        tg.onEvent('mainButtonCliked', onSendData)
+        return () => {
+            tg.offEvent('mainButtonCliked', onSendData)
+        }
+    }, []);
 
 
     return (
@@ -47,7 +54,7 @@ function App() {
             <button onClick={onClose}>Закрыть эту хрень</button>
             <Button title={'кнопка снизу'} disable={false} onClick={onToggleButton} />
             <Button title={'вывод сообщения'} disable={false} onClick={handleClick} />
-            <Button title={'subscribe'} disable={false} onClick={handleSubmit} />
+            <Button title={'subscribe'} disable={false} onClick={onSendData} />
         </div>
     )
 }
