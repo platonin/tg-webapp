@@ -32,7 +32,7 @@ function App() {
 
     const handleClick = () => {
         // Ваше сообщение
-        alert("Кнопка нажата!");
+        alert("Кнопка нажата");
     };
 
     const handleSendData = () => {
@@ -56,8 +56,8 @@ function App() {
 
     return (
         <div className="App">
-            сайт сайт сайт
-            <button onClick={onClose}>Закрыть эту хрень</button>
+            {/*<button onClick={onClose}>Закрыть эту хрень</button>*/}
+            <Button title={'Закрыть эту хрень'} disable={false} onClick={onClose} />
             <Button title={'кнопка снизу'} disable={false} onClick={onToggleButton} />
             <Button title={'вывод сообщения'} disable={false} onClick={handleClick} />
             <Button title={'subscribe'} disable={false} onClick={handleSendData} />
