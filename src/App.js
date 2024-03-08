@@ -31,22 +31,3 @@ function App() {
     )
 }
 export default App;
-
-// function App() {
-//     const [button1Clicked, setButton1Clicked] = useState(false);
-//     const [button2Clicked, setButton2Clicked] = useState(false);
-//     const [button3Clicked, setButton3Clicked] = useState(false);
-//
-//     return (
-//         <div>
-//             <button onClick={() => setButton1Clicked(true)}>Button 1</button>
-//             <button onClick={() => setButton2Clicked(true)}>Button 2</button>
-//             <button onClick={() => setButton3Clicked(true)}>Button 3</button>
-//
-//             {button1Clicked && <p>Button 1 was clicked!</p>}
-//             {button2Clicked && <p>Button 2 was clicked!</p>}
-//             {button3Clicked && <p>Button 3 was clicked!</p>}
-//         </div>
-//     );
-// }
-// export default App;
