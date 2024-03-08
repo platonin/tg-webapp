@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import Button from "./Components/Button/Button";
 const tg = window.Telegram.WebApp;
 // function App() {
 //   return (
@@ -20,10 +21,12 @@ function App() {
         tg.close()
     }
 
+
     return (
         <div className="App">
             сайт сайт сайт
             <button onClick={onClose}>Закрыть эту хрень</button>
+            <Button title={'Test'} disable={false} />
         </div>
     )
 }
