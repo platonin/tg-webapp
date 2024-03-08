@@ -35,7 +35,7 @@ function App() {
         <div className="App">
             сайт сайт сайт
             <button onClick={onClose}>Закрыть эту хрень</button>
-            <Button title={'Test'} disable={false} onClick={onToggleButton()} />
+            <Button title={'Test'} disable={false} onClick={onToggleButton} />
         </div>
     )
 }
