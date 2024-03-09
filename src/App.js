@@ -36,14 +36,15 @@ function App() {
     };
 
     const handleSendData = () => {
-        const data = "handleSubmitActive";
+        const data = chatId;
         console.log(data);
         tg.sendData(data);
     };
 
     const onSendData = useCallback(() => {
         // Ваше сообщение
-        tg.sendData("handleSubmitActive");
+        const data = chatId;
+        tg.sendData("handleSubmitActive-----");
     }, [])
 
     useEffect(() => {
@@ -54,14 +55,35 @@ function App() {
     }, []);
 
 
+    const [chatId, setChatId] = useState('');
+    const handleChange = (e) => {
+        setChatId(e.target.value);
+    };
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     // Здесь можно выполнить отправку chatId на сервер или другие действия с ним
+    //     console.log('Chat ID:', chatId);
+    //     // Очистка поля после отправки, если необходимо
+    //     setChatId('');
+    // };
+
     return (
         <div className="App">
+            <h3>Введите ваши данные</h3>
+            <input
+                className={'input'}
+                type="text"
+                placeholder={'Chat ID'}
+                value={chatId}
+                onChange={handleChange}
+            />
             {/*<button onClick={onClose}>Закрыть эту хрень</button>*/}
-            <Button title={'Закрыть эту хрень'} disable={false} onClick={onClose} />
-            <Button title={'кнопка снизу'} disable={false} onClick={onToggleButton} />
-            <Button title={'вывод сообщения'} disable={false} onClick={handleClick} />
-            <Button title={'subscribe'} disable={false} onClick={handleSendData} />
+            <Button title={'Закрыть эту хрень'} disable={false} onClick={onClose}/>
+            <Button title={'кнопка снизу'} disable={false} onClick={onToggleButton}/>
+            <Button title={'вывод сообщения'} disable={false} onClick={handleClick}/>
+            <Button title={'subscribe'} disable={false} onClick={handleSendData}/>
         </div>
     )
 }
+
 export default App;
