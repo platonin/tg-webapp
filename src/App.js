@@ -44,13 +44,13 @@ function App() {
     };
 
     const handleSendData = () => {
-        const data = [chatIdData, 'sub'];
+        const data = chatIdData + ';sub';
         // console.log(data);
         tg.sendData(data);
     };
 
     const handleSendDataCreate = () => {
-        const data = [chatIdData, 'create'];
+        const data = chatIdData + ';create';
         // console.log(data);
         tg.sendData(data);
     };
