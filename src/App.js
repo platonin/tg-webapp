@@ -2,21 +2,8 @@ import React, {useCallback, useEffect, useState} from 'react';
 import './App.css';
 import Button from "./Components/Button/Button";
 const tg = window.Telegram.WebApp;
-// function App() {
-//   return (
-//       <div classname = "App">
-//         привет ариuuyyuyuyuyuyuuyuyuyuyuyuyuветеп
-//       </div>
-//   );
-// }
-//
-// export default App;
-
 function App() {
 
-    // useEffect( () => {
-    //         tg.ready();
-    //     }, [])
     const onClose = () => {
         tg.close()
     }
@@ -35,29 +22,37 @@ function App() {
         alert("Кнопка нажата");
     };
 
+
+
+    // const onSendData = useCallback(() => {
+    //     // Ваше сообщение
+    //     const data = chatId;
+    //     tg.sendData("handleSubmitActive-----");
+    // }, [])
+
+    // useEffect(() => {
+    //     tg.onEvent('mainButtonCliked', onSendData)
+    //     return () => {
+    //         tg.offEvent('mainButtonCliked', onSendData)
+    //     }
+    // }, []);
+
+
+    const [chatIdData, setChatIdData] = useState('');
+    const handleChange = (e) => {
+        setChatIdData(e.target.value);
+    };
+
     const handleSendData = () => {
-        const data = chatId;
-        console.log(data);
+        const data = [chatIdData, 'sub'];
+        // console.log(data);
         tg.sendData(data);
     };
 
-    const onSendData = useCallback(() => {
-        // Ваше сообщение
-        const data = chatId;
-        tg.sendData("handleSubmitActive-----");
-    }, [])
-
-    useEffect(() => {
-        tg.onEvent('mainButtonCliked', onSendData)
-        return () => {
-            tg.offEvent('mainButtonCliked', onSendData)
-        }
-    }, []);
-
-
-    const [chatId, setChatId] = useState('');
-    const handleChange = (e) => {
-        setChatId(e.target.value);
+    const handleSendDataCreate = () => {
+        const data = [chatIdData, 'create'];
+        // console.log(data);
+        tg.sendData(data);
     };
     // const handleSubmit = (e) => {
     //     e.preventDefault();
@@ -75,7 +70,7 @@ function App() {
                 className={'input'}
                 type="text"
                 placeholder={'Chat ID'}
-                value={chatId}
+                value={chatIdData}
                 onChange={handleChange}
             />
 
@@ -84,6 +79,7 @@ function App() {
             {/*<Button title={'кнопка снизу'} disable={false} onClick={onToggleButton}/>*/}
             {/*<Button title={'вывод сообщения'} disable={false} onClick={handleClick}/>*/}
             <Button title={'subscribe'} disable={false} onClick={handleSendData}/>
+            <Button title={'create community'} disable={false} onClick={handleSendDataCreate}/>
         </div>
     )
 }
