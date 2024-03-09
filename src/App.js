@@ -78,6 +78,7 @@ function App() {
                 value={chatId}
                 onChange={handleChange}
             />
+
             {/*<button onClick={onClose}>Закрыть эту хрень</button>*/}
             {/*<Button title={'Закрыть эту хрень'} disable={false} onClick={onClose}/>*/}
             {/*<Button title={'кнопка снизу'} disable={false} onClick={onToggleButton}/>*/}

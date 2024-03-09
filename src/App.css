@@ -37,10 +37,11 @@ body {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 12px;
-  background-color: var(--tg-theme-section-bg-color); /*#f9f9f9;*/
+  background-color: #f9f9f9; /*var(--tg-theme-section-bg-color)*/
 }
 
 h3 {
+  font: menu;
   color: var(--tg-theme-accent-text-color);
   font-size: 1.5rem;
   margin-bottom: 20px;
