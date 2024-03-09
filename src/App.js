@@ -69,7 +69,8 @@ function App() {
 
     return (
         <div className="App">
-            <h3>Введите ваши данные</h3>
+            <h3>Введите Chat ID</h3>
+
             <input
                 className={'input'}
                 type="text"
@@ -78,9 +79,9 @@ function App() {
                 onChange={handleChange}
             />
             {/*<button onClick={onClose}>Закрыть эту хрень</button>*/}
-            <Button title={'Закрыть эту хрень'} disable={false} onClick={onClose}/>
-            <Button title={'кнопка снизу'} disable={false} onClick={onToggleButton}/>
-            <Button title={'вывод сообщения'} disable={false} onClick={handleClick}/>
+            {/*<Button title={'Закрыть эту хрень'} disable={false} onClick={onClose}/>*/}
+            {/*<Button title={'кнопка снизу'} disable={false} onClick={onToggleButton}/>*/}
+            {/*<Button title={'вывод сообщения'} disable={false} onClick={handleClick}/>*/}
             <Button title={'subscribe'} disable={false} onClick={handleSendData}/>
         </div>
     )
