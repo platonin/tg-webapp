@@ -73,12 +73,33 @@ function App() {
                 value={chatIdData}
                 onChange={handleChange}
             />
+            <input
+                className={'input'}
+                type="text"
+                placeholder={'Price'}
+                value={chatIdData}
+                onChange={handleChange}
+            />
+            <input
+                className={'input'}
+                type="text"
+                placeholder={'Maximum users'}
+                value={chatIdData}
+                onChange={handleChange}
+            />
+            <input
+                className={'input'}
+                type="text"
+                placeholder={'Description'}
+                value={chatIdData}
+                onChange={handleChange}
+            />
 
             {/*<button onClick={onClose}>Закрыть эту хрень</button>*/}
             {/*<Button title={'Закрыть эту хрень'} disable={false} onClick={onClose}/>*/}
             {/*<Button title={'кнопка снизу'} disable={false} onClick={onToggleButton}/>*/}
             {/*<Button title={'вывод сообщения'} disable={false} onClick={handleClick}/>*/}
-            <Button title={'subscribe'} disable={false} onClick={handleSendData}/>
+            {/*<Button title={'subscribe'} disable={false} onClick={handleSendData}/>*/}
             <Button title={'create community'} disable={false} onClick={handleSendDataCreate}/>
         </div>
     )
