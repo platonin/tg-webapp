@@ -39,9 +39,22 @@ function App() {
 
 
     const [chatIdData, setChatIdData] = useState('');
-    const handleChange = (e) => {
+    const [Price, setPrice] = useState('');
+    const [Maximum_sers, setMaximum_sers] = useState('');
+    const [Descr, setDescr] = useState('');
+    const handleChange1 = (e) => {
         setChatIdData(e.target.value);
     };
+    const handleChange2 = (e) => {
+        setPrice(e.target.value);
+    };
+    const handleChange3 = (e) => {
+        setMaximum_sers(e.target.value);
+    };
+    const handleChange4 = (e) => {
+        setDescr(e.target.value);
+    };
+
 
     const handleSendData = () => {
         const data = chatIdData + ';sub';
@@ -71,31 +84,31 @@ function App() {
                 type="text"
                 placeholder={'Chat ID'}
                 value={chatIdData}
-                onChange={handleChange}
+                onChange={handleChange1}
             />
             <h3></h3>
             <input
                 className={'input'}
                 type="text"
                 placeholder={'Price'}
-                value={chatIdData}
-                onChange={handleChange}
+                value={Price}
+                onChange={handleChange2}
             />
             <h3></h3>
             <input
                 className={'input'}
                 type="text"
                 placeholder={'Maximum users'}
-                value={chatIdData}
-                onChange={handleChange}
+                value={Maximum_sers}
+                onChange={handleChange3}
             />
             <h3></h3>
             <input
                 className={'input'}
                 type="text"
                 placeholder={'Description'}
-                value={chatIdData}
-                onChange={handleChange}
+                value={Descr}
+                onChange={handleChange4}
             />
             <h3></h3>
             {/*<button onClick={onClose}>Закрыть эту хрень</button>*/}
