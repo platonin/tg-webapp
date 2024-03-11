@@ -64,7 +64,7 @@ function App() {
 
     return (
         <div className="App">
-            <h3>Введите Chat ID</h3>
+            <h3>Enter the data</h3>
 
             <input
                 className={'input'}
@@ -73,6 +73,7 @@ function App() {
                 value={chatIdData}
                 onChange={handleChange}
             />
+
             <input
                 className={'input'}
                 type="text"
@@ -80,6 +81,7 @@ function App() {
                 value={chatIdData}
                 onChange={handleChange}
             />
+
             <input
                 className={'input'}
                 type="text"
@@ -87,6 +89,7 @@ function App() {
                 value={chatIdData}
                 onChange={handleChange}
             />
+
             <input
                 className={'input'}
                 type="text"
