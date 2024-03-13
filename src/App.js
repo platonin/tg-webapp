@@ -21,9 +21,6 @@ function App() {
         // Ваше сообщение
         alert("Кнопка нажата");
     };
-
-
-
     // const onSendData = useCallback(() => {
     //     // Ваше сообщение
     //     const data = chatId;
@@ -36,7 +33,6 @@ function App() {
     //         tg.offEvent('mainButtonCliked', onSendData)
     //     }
     // }, []);
-
 
     const [chatIdData, setChatIdData] = useState('');
     const [Price, setPrice] = useState('');
@@ -54,7 +50,6 @@ function App() {
     const handleChange4 = (e) => {
         setDescr(e.target.value);
     };
-
 
     const handleSendData = () => {
         const data = chatIdData + ';sub';
