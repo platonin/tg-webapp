@@ -1,6 +1,6 @@
-# используем официальный образ Node.js
+# используем официальный образ Node.js как базовый
 FROM node:14-alpine
-ENV NODE_ENV=production
+ENV NODE_ENV
 
 # создание директории приложения внутри образа
 WORKDIR /usr/src/app
